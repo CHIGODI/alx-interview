@@ -1,5 +1,5 @@
 #!/usr/bin/node
-function makeRequest(url) {
+function makeRequest (url) {
   const request = require('request');
   return new Promise((resolve, reject) => {
     request.get(url, (error, response, body) => {
@@ -15,7 +15,7 @@ function makeRequest(url) {
  * Retrieves movie character info then prints their names
  * in order of appearance in the initial response.
  */
-async function main() {
+async function main () {
   const args = process.argv;
 
   if (args.length < 3) return;

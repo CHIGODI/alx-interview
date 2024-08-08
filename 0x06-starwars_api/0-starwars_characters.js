@@ -16,12 +16,8 @@ request(`https://swapi-api.alx-tools.com/api/films/${movieID}/`,
 
     characters.forEach(character => {
       async function getCharacter () {
-        try {
-          const response = await axios.get(character);
-          console.log(response.data.name);
-        } catch (error) {
-          console.error('Error fetching character:', error);
-        }
+        const response = await axios.get(character);
+        console.log(response.data.name);
       }
       getCharacter();
     });
